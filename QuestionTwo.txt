@@ -1,0 +1,19 @@
+Task One:
+def simple_sort(arr):
+  n = len(arr)                                  (getting the length of the arr and setting it equal to n)
+  for i in range(n):                            (outer loop that creates a number for each index of the length of the arr) ex: arr.len() = 5
+    for j in range(0, n-i-1):                   (inner loop that (starts) at index 0, (stops) length of the arr - value of outer loop (index+1) - 1)
+      if arr[j] > arr[j+1]:                     (checks if arr[index of j] is greater than arr[index of j+1])
+        arr[j], arr[j+1] = arr[j+1], arr[j]     (if that is true it set arr[j] and arr[j+1] = to the position of arr[j+1], arr[j] effectively 
+                                                moving them into the correct order where arr[j] is of a higher value than arr[j+1] than starts 
+                                                again at the next index and so on and so forth till finds its appropriate position and starting 
+                                                over to the outer loop and repeat)   
+We are using the outer loop to create the indexes of the array and getting the values of those indexes and comparing them to see witch is higher 
+and moving the position of those indexes based on the values of the index that we are on.
+
+Task Two:
+(O(n^2)) 'Big O(n squared)' I what I figured to be the answer as the algorithm's runtime grows concerning the size of the input.
+
+Task Three:
+I would add a flag that checks if the length of the array is one. If it is, return the array; otherwise, start the sort. I couldn’t find an 
+example of anything that could get it down to (O(1)). From what I've seen, this is a 'bubble sort' and is the best way to effectively sort arrays.
